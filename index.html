@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORGE Athletic Club | Strength Is Built, Not Given</title>
+  <meta name="description" content="FORGE Athletic Club - premium strength training, coaching, and community." />
+
+  <!-- Google Fonts: Bebas Neue (bold poster display face), Inter (clean body face),
+       JetBrains Mono (utility face for numbers/stats/schedule times) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Our own stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =====================================================
+       HEADER / STICKY NAVIGATION BAR
+       Semantic <header> wraps the site identity + <nav> which
+       holds the primary navigation links. Marked "sticky" via
+       CSS (position: sticky) and given an "active" state on
+       scroll via JavaScript.
+  ====================================================== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="#home" class="nav-logo">FORGE<span class="nav-logo-dot">.</span></a>
+
+      <!-- Nav links list. Hidden off-canvas on mobile, toggled by JS -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#membership" class="nav-link">Membership</a></li>
+        <li><a href="#trainers" class="nav-link">Trainers</a></li>
+        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+        <li><a href="#testimonials" class="nav-link">Stories</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-cta-mobile-wrap"><a href="#membership" class="btn btn-primary nav-cta-mobile">Join Now</a></li>
+      </ul>
+
+      <a href="#membership" class="btn btn-primary nav-cta">Join Now</a>
+
+      <!-- Hamburger button for mobile menu -- three spans become an X via CSS/JS -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =====================================================
+         HERO SECTION
+         The first, biggest visual statement on the page.
+         Contains the headline, supporting copy, CTA buttons
+         and a quick stats strip.
+    ====================================================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content fade-in">
+        <p class="eyebrow">Lahore's Strength &amp; Conditioning Studio</p>
+        <h1 class="hero-title">STRENGTH IS <span class="text-accent">FORGED</span>,<br />NOT GIVEN.</h1>
+        <p class="hero-subtitle">
+          Barbell coaching, honest programming, and a community that shows up.
+          No fads. No gimmicks. Just progressive, measurable strength.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#membership" class="btn btn-primary">Start Your First Week Free</a>
+          <a href="#schedule" class="btn btn-outline">View Class Schedule</a>
+        </div>
+
+        <!-- Quick stat strip -- reinforces credibility at a glance -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="1200">0</span>
+            <span class="hero-stat-label">Members Trained</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="12">0</span>
+            <span class="hero-stat-label">Years Forging</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="18">0</span>
+            <span class="hero-stat-label">Certified Coaches</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature divider: a barbell-plate motif that separates major sections -->
+    <div class="plate-divider" aria-hidden="true">
+      <span class="plate plate-lg"></span>
+      <span class="plate plate-md"></span>
+      <span class="plate plate-sm"></span>
+      <span class="bar"></span>
+      <span class="plate plate-sm"></span>
+      <span class="plate plate-md"></span>
+      <span class="plate plate-lg"></span>
+    </div>
+
+    <!-- =====================================================
+         ABOUT THE GYM
+         <article> is used because this is a self-contained
+         piece of narrative content (the gym's story) that
+         could stand alone if syndicated elsewhere.
+    ====================================================== -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <article class="about-text fade-in">
+          <p class="eyebrow">About The Gym</p>
+          <h2 class="section-title">Built By Lifters, For Lifters</h2>
+          <p class="section-text">
+            FORGE opened in 2014 in a converted textile warehouse with four
+            barbells and a single squat rack. Today it's the same idea, just
+            scaled up: a no-nonsense strength floor, coaches who actually
+            coach, and programming built around your numbers -- not a
+            one-size-fits-all class.
+          </p>
+          <p class="section-text">
+            We believe fitness should be measured in progress, not in how
+            sore you feel. Every member gets a baseline assessment, a
+            written program, and a coach who tracks your lifts week over
+            week.
+          </p>
+          <ul class="about-checklist">
+            <li>Free movement assessment for every new member</li>
+            <li>Small-group coaching, max 10 lifters per session</li>
+            <li>In-house physiotherapist on site three days a week</li>
+          </ul>
+        </article>
+
+        <div class="about-image fade-in">
+          <img src="https://picsum.photos/seed/forge-gym-floor/700/850" alt="Coach spotting a member during a barbell back squat on the FORGE gym floor" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         WHY CHOOSE US
+         CSS Grid is used here because the cards need to wrap
+         into a flexible, equal-sized grid regardless of count.
+    ====================================================== -->
+    <section class="why-us" id="why-us">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Why Choose Us</p>
+          <h2 class="section-title">Everything Except Excuses</h2>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card fade-in">
+            <div class="why-icon" aria-hidden="true">&#9889;</div>
+            <h3>Real Programming</h3>
+            <p>Periodized strength cycles built around your numbers, reviewed and adjusted every four weeks.</p>
+          </article>
+          <article class="why-card fade-in">
+            <div class="why-icon" aria-hidden="true">&#127942;</div>
+            <h3>Certified Coaches</h3>
+            <p>Every coach on our floor holds a national strength-and-conditioning certification.</p>
+          </article>
+          <article class="why-card fade-in">
+            <div class="why-icon" aria-hidden="true">&#128337;</div>
+            <h3>Open Early, Close Late</h3>
+            <p>Floor access from 5 AM to 11 PM, seven days a week -- train around your schedule, not ours.</p>
+          </article>
+          <article class="why-card fade-in">
+            <div class="why-icon" aria-hidden="true">&#129505;</div>
+            <h3>Recovery Built In</h3>
+            <p>Mobility room, percussion guns, and a physiotherapist on site three days a week.</p>
+          </article>
+          <article class="why-card fade-in">
+            <div class="why-icon" aria-hidden="true">&#128101;</div>
+            <h3>A Floor That Shows Up</h3>
+            <p>Small class sizes mean coaches know your name, your goals, and your injury history.</p>
+          </article>
+          <article class="why-card fade-in">
+            <div class="why-icon" aria-hidden="true">&#128202;</div>
+            <h3>Tracked Progress</h3>
+            <p>Every session logged. Every lift charted. You'll always know if you're actually getting stronger.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MEMBERSHIP PLANS
+         Grid of pricing cards. The middle plan is visually
+         emphasized as the recommended option.
+    ====================================================== -->
+    <section class="membership" id="membership">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Membership Plans</p>
+          <h2 class="section-title">Pick Your Level Of Commitment</h2>
+        </div>
+
+        <div class="membership-grid">
+          <article class="plan-card fade-in">
+            <h3 class="plan-name">Starter</h3>
+            <p class="plan-price"><span class="plan-currency">$</span>29<span class="plan-period">/mo</span></p>
+            <p class="plan-desc">For lifters who just need the floor.</p>
+            <ul class="plan-features">
+              <li>Full gym floor access</li>
+              <li>2 group classes / week</li>
+              <li>Locker room access</li>
+              <li>Mobile progress log</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline plan-btn">Choose Starter</a>
+          </article>
+
+          <article class="plan-card plan-featured fade-in">
+            <p class="plan-badge">Most Popular</p>
+            <h3 class="plan-name">Performance</h3>
+            <p class="plan-price"><span class="plan-currency">$</span>59<span class="plan-period">/mo</span></p>
+            <p class="plan-desc">Unlimited classes plus real coaching.</p>
+            <ul class="plan-features">
+              <li>Unlimited gym floor access</li>
+              <li>Unlimited group classes</li>
+              <li>Monthly 1-on-1 check-in</li>
+              <li>Recovery room access</li>
+              <li>Nutrition guidance</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary plan-btn">Choose Performance</a>
+          </article>
+
+          <article class="plan-card fade-in">
+            <h3 class="plan-name">Elite</h3>
+            <p class="plan-price"><span class="plan-currency">$</span>99<span class="plan-period">/mo</span></p>
+            <p class="plan-desc">Fully personalized coaching program.</p>
+            <ul class="plan-features">
+              <li>Everything in Performance</li>
+              <li>Weekly 1-on-1 coaching</li>
+              <li>Custom programming</li>
+              <li>Priority class booking</li>
+              <li>Physiotherapy session / month</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline plan-btn">Choose Elite</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MEET OUR TRAINERS
+    ====================================================== -->
+    <section class="trainers" id="trainers">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Meet Our Trainers</p>
+          <h2 class="section-title">The Coaches On The Floor</h2>
+        </div>
+
+        <div class="trainers-grid">
+          <article class="trainer-card fade-in">
+            <img src="https://picsum.photos/seed/coach-hana/400/480" alt="Coach Hana Malik" loading="lazy" />
+            <div class="trainer-info">
+              <h3>Hana Malik</h3>
+              <p class="trainer-role">Head Strength Coach</p>
+              <p class="trainer-bio">10 years coaching competitive powerlifters and first-time lifters alike.</p>
+            </div>
+          </article>
+          <article class="trainer-card fade-in">
+            <img src="https://picsum.photos/seed/coach-ahmed/400/480" alt="Coach Ahmed Raza" loading="lazy" />
+            <div class="trainer-info">
+              <h3>Ahmed Raza</h3>
+              <p class="trainer-role">Conditioning Coach</p>
+              <p class="trainer-bio">Specializes in metabolic conditioning and sport-specific speed work.</p>
+            </div>
+          </article>
+          <article class="trainer-card fade-in">
+            <img src="https://picsum.photos/seed/coach-sara/400/480" alt="Coach Sara Khan" loading="lazy" />
+            <div class="trainer-info">
+              <h3>Sara Khan</h3>
+              <p class="trainer-role">Mobility &amp; Recovery</p>
+              <p class="trainer-bio">Licensed physiotherapist focused on injury prevention and long-term durability.</p>
+            </div>
+          </article>
+
+          
+          <article class="trainer-card fade-in">
+            <img src="https://picsum.photos/seed/coach-bilal/400/480" alt="Coach Bilal Ahmed" loading="lazy" />
+            <div class="trainer-info">
+              <h3>Bilal Ahmed</h3>
+              <p class="trainer-role">Olympic Lifting Coach</p>
+              <p class="trainer-bio">Former national-level weightlifter teaching the snatch and clean & jerk.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         WEEKLY CLASS SCHEDULE
+         A table is semantically correct here: this is genuine
+         tabular data (day x time x class).
+    ====================================================== -->
+    <section class="schedule" id="schedule">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Weekly Class Schedule</p>
+          <h2 class="section-title">Find Your Slot</h2>
+        </div>
+
+        <div class="schedule-table-wrapper fade-in">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Monday</th>
+                <th scope="col">Wednesday</th>
+                <th scope="col">Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">6:00 AM</th>
+                <td>Strength Foundations</td>
+                <td>Olympic Lifting</td>
+                <td>Strength Foundations</td>
+              </tr>
+              <tr>
+                <th scope="row">9:00 AM</th>
+                <td>Conditioning Circuit</td>
+                <td>Mobility Flow</td>
+                <td>Conditioning Circuit</td>
+              </tr>
+              <tr>
+                <th scope="row">5:30 PM</th>
+                <td>Powerlifting Prep</td>
+                <td>Strength Foundations</td>
+                <td>Powerlifting Prep</td>
+              </tr>
+              <tr>
+                <th scope="row">7:00 PM</th>
+                <td>Open Floor Coaching</td>
+                <td>Conditioning Circuit</td>
+                <td>Open Floor Coaching</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SUCCESS STORIES / TESTIMONIALS
+         A JS-powered slider that shows one testimonial card
+         at a time, with prev/next controls and dot indicators.
+    ====================================================== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Success Stories</p>
+          <h2 class="section-title">What Our Members Say</h2>
+        </div>
+
+        <div class="testimonial-slider fade-in">
+          <button class="slider-arrow slider-arrow-left" id="prevTestimonial" aria-label="Previous testimonial">&#8249;</button>
+
+          <div class="testimonial-track" id="testimonialTrack">
+            <article class="testimonial-slide">
+              <p class="testimonial-quote">"I walked in unable to do a single push-up. Fourteen months later I deadlift 1.5x my bodyweight. The coaching here is the difference."</p>
+              <p class="testimonial-author">-- Amna Tariq, Member since 2024</p>
+            </article>
+            <article class="testimonial-slide">
+              <p class="testimonial-quote">"Every other gym I've tried felt like guesswork. FORGE gave me an actual plan, and I could see my numbers improve every single week."</p>
+              <p class="testimonial-author">-- Usman Farooq, Member since 2023</p>
+            </article>
+            <article class="testimonial-slide">
+              <p class="testimonial-quote">"The recovery room alone is worth the membership. Between that and the coaching, I've had zero injuries in two years of heavy training."</p>
+              <p class="testimonial-author">-- Fatima Noor, Member since 2022</p>
+            </article>
+          </div>
+
+          <button class="slider-arrow slider-arrow-right" id="nextTestimonial" aria-label="Next testimonial">&#8250;</button>
+
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BMI CALCULATOR
+         A small interactive tool. Inputs feed a JS function
+         that calculates and displays a BMI category.
+    ====================================================== -->
+    <section class="bmi" id="bmi-calculator">
+      <div class="container bmi-grid">
+        <div class="bmi-text fade-in">
+          <p class="eyebrow">Know Your Numbers</p>
+          <h2 class="section-title">BMI Calculator</h2>
+          <p class="section-text">
+            BMI is a rough starting point, not a verdict -- it doesn't
+            account for muscle mass. Use it as one data point among many,
+            and talk to a coach about a fuller picture of your health.
+          </p>
+        </div>
+
+        <form class="bmi-card fade-in" id="bmiForm">
+          <div class="form-row">
+            <label for="bmiHeight">Height (cm)</label>
+            <input type="number" id="bmiHeight" placeholder="e.g. 175" min="50" max="272" required />
+          </div>
+          <div class="form-row">
+            <label for="bmiWeight">Weight (kg)</label>
+            <input type="number" id="bmiWeight" placeholder="e.g. 70" min="10" max="500" required />
+          </div>
+          <button type="submit" class="btn btn-primary bmi-submit">Calculate BMI</button>
+
+          <div class="bmi-result" id="bmiResult" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         IMAGE GALLERY
+         CSS Grid with a masonry-like feel using varied row
+         spans, so it's more visually dynamic than a plain grid.
+    ====================================================== -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Inside FORGE</p>
+          <h2 class="section-title">The Floor In Action</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <img class="fade-in gallery-item-tall" src="https://picsum.photos/seed/forge-1/500/700" alt="Member performing a heavy deadlift" loading="lazy" />
+          <img class="fade-in" src="https://picsum.photos/seed/forge-2/500/400" alt="Group conditioning class mid-workout" loading="lazy" />
+          <img class="fade-in" src="https://picsum.photos/seed/forge-3/500/400" alt="Rack of loaded barbells" loading="lazy" />
+          <img class="fade-in gallery-item-tall" src="https://picsum.photos/seed/forge-4/500/700" alt="Coach demonstrating proper squat form" loading="lazy" />
+          <img class="fade-in" src="https://picsum.photos/seed/forge-5/500/400" alt="Mobility and stretching area" loading="lazy" />
+          <img class="fade-in" src="https://picsum.photos/seed/forge-6/500/400" alt="Kettlebell and dumbbell rack" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FREQUENTLY ASKED QUESTIONS
+         An accordion built with buttons controlling hidden
+         panels -- accessible and keyboard operable.
+    ====================================================== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title">Questions, Answered</h2>
+        </div>
+
+        <div class="faq-list fade-in">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do I need experience to join?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No. Every new member starts with a free movement assessment so we can build a program around your current ability, whether that's your first workout or your hundredth.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can I freeze or cancel my membership?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Memberships can be frozen for up to 60 days per year for travel or injury, and cancelled anytime with 30 days' notice -- no hidden fees.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What should I bring to my first session?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Comfortable training clothes, flat-soled shoes, and a water bottle. We provide chalk, bands, and all equipment on the floor.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you offer nutrition coaching?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Performance and Elite members get ongoing nutrition guidance from our coaching staff, built around your training load and goals.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Is parking available on site?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, free member parking is available directly behind the building, with overflow street parking on the adjacent block.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT FORM + GOOGLE MAPS PLACEHOLDER
+         Two-column layout: a validated contact form beside a
+         map placeholder (an <iframe> would hold a real embed).
+    ====================================================== -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <form class="contact-form fade-in" id="contactForm" novalidate>
+          <p class="eyebrow">Get In Touch</p>
+          <h2 class="section-title">Come Train With Us</h2>
+
+          <div class="form-row">
+            <label for="contactName">Full Name</label>
+            <input type="text" id="contactName" name="name" placeholder="Your name" />
+            <span class="form-error" id="nameError"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" name="email" placeholder="you@example.com" />
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="contactPhone">Phone Number</label>
+            <input type="tel" id="contactPhone" name="phone" placeholder="0300 1234567" />
+            <span class="form-error" id="phoneError"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us about your goals..."></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
+          <p class="form-success" id="formSuccess" aria-live="polite"></p>
+        </form>
+
+        <div class="map-placeholder fade-in" id="mapPlaceholder">
+          <!-- In production, swap this div's contents for a real
+               <iframe src="https://www.google.com/maps/embed?..."></iframe> -->
+          <div class="map-placeholder-inner">
+            <p class="map-pin" aria-hidden="true">&#128205;</p>
+            <p class="map-title">FORGE Athletic Club</p>
+            <p class="map-address">12 Ferozepur Road, Lahore, Punjab, Pakistan</p>
+            <p class="map-note">Google Maps embed goes here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+       Useful links, contact snippet, and social icons.
+  ====================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">FORGE<span class="nav-logo-dot">.</span></a>
+        <p class="footer-tagline">Strength is forged, not given.</p>
+
+        <!-- Social icons -- simple SVG icons, no external icon library -->
+        <div class="social-icons">
+          <a href="#" aria-label="FORGE on Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2c2.7 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.55.55.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.07.06 1.42.06 4.13s-.01 3.06-.06 4.13c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.25-1.37.42-2.43.47-1.07.05-1.42.06-4.12.06s-3.06-.01-4.13-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.13c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.44 2.53c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.17 1.17 0 1 1-2.34 0 1.17 1.17 0 0 1 2.34 0z"/></svg>
+          </a>
+          <a href="#" aria-label="FORGE on Facebook" class="social-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.5 21v-8.1h2.7l.4-3.1h-3.1V7.8c0-.9.25-1.5 1.55-1.5H16.7V3.5c-.28-.04-1.25-.12-2.37-.12-2.35 0-3.96 1.43-3.96 4.06v2.35H7.6v3.1h2.77V21h3.13z"/></svg>
+          </a>
+          <a href="#" aria-label="FORGE on YouTube" class="social-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21.6 7.2s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.9 4 12 4 12 4s-3.9 0-6.7.2c-.4 0-1.3.1-2.1.9-.6.6-.8 2.1-.8 2.1S2.2 9 2.2 10.7v1.6C2.2 14 2.4 15.8 2.4 15.8s.2 1.5.8 2.1c.8.8 1.8.8 2.3.9 1.7.2 6.5.2 6.5.2s3.9 0 6.7-.2c.4 0 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.8.2-3.5v-1.6c0-1.7-.2-3.5-.2-3.5zM9.9 14.2V8.9l5.2 2.7-5.2 2.6z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>12 Ferozepur Road, Lahore</li>
+          <li>+92 300 1234567</li>
+          <li>hello@forgeathletic.example</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> FORGE Athletic Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button, shown/hidden and made functional via JavaScript -->
+  <button id="scrollToTopBtn" aria-label="Scroll back to top">&#8593;</button>
+
+  <!-- Our own JavaScript, loaded at the end so the DOM exists before it runs -->
+  <script src="script.js"></script>
+</body>
+</html>
